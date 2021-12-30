@@ -14,8 +14,10 @@ public class PlayerMovement : MonoBehaviour
 	private SpriteRenderer _renderer;
 	private BoxCollider2D _collider;
 
-	private bool isGrounded = false;
 	private float dirX;
+	private bool isGrounded = false;
+	private bool canDoubleJump = false;
+
 
 	private void Awake()
 	{
@@ -28,9 +30,19 @@ public class PlayerMovement : MonoBehaviour
 	{
 		MovePlayer();
 
-		if (Input.GetButton("Jump") && isGrounded)
+		if (Input.GetButtonDown("Jump"))
 		{
-			Jump();
+			if (isGrounded)
+			{
+				Jump();
+				canDoubleJump = true;
+			}
+			else if (canDoubleJump)
+			{
+				Jump();
+				canDoubleJump = false;
+				_animator.SetTrigger("DoubleJump");
+			}
 		}
 
 		UpdateAnimation();
