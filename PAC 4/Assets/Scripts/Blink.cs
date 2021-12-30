@@ -18,8 +18,8 @@ public class Blink : MonoBehaviour
 	{
 		while (true)
 		{
-            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a == 0 ? 1 : 0);
+			text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a == 0 ? 1 : 0);
 			yield return new WaitForSeconds(interval);
 		}
- 	}
+	}
 }
