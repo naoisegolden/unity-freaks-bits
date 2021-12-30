@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
 	private bool isGrounded = false;
 	private bool canDoubleJump = false;
 
-
 	private void Awake()
 	{
 		_rb = GetComponent<Rigidbody2D>();
@@ -85,9 +84,9 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+		if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
 		{
 			// End jump
 			isGrounded = true;
