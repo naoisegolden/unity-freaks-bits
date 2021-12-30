@@ -1,40 +1,25 @@
 fileFormatVersion: 2
-guid: 156a72768da104ab2b7b82e8517d2b71
+guid: 5fd9f3ec1e3e0bc4d8e308e10012a36a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6367560908665664636
-    second: Idle (32x32)_0
+      213: -9101230857065804138
+    second: Double Jump (32x32)_0
   - first:
-      213: -6056987297122131021
-    second: Idle (32x32)_1
+      213: -6204479477933590408
+    second: Double Jump (32x32)_1
   - first:
-      213: 8416797952724722639
-    second: Idle (32x32)_2
+      213: 7040038629683462113
+    second: Double Jump (32x32)_2
   - first:
-      213: 4883129791460916795
-    second: Idle (32x32)_3
+      213: 781615245368611544
+    second: Double Jump (32x32)_3
   - first:
-      213: 4278371960119211202
-    second: Idle (32x32)_4
+      213: -3939753913355333839
+    second: Double Jump (32x32)_4
   - first:
-      213: 8644832591467991550
-    second: Idle (32x32)_5
-  - first:
-      213: -7152759390613953277
-    second: Idle (32x32)_6
-  - first:
-      213: 6456874251884481089
-    second: Idle (32x32)_7
-  - first:
-      213: -2526832996998184344
-    second: Idle (32x32)_8
-  - first:
-      213: 4392827059107796345
-    second: Idle (32x32)_9
-  - first:
-      213: -1363835404106015672
-    second: Idle (32x32)_10
+      213: 6301718139250434432
+    second: Double Jump (32x32)_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,14 +79,14 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,7 +122,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle (32x32)_0
+      name: Double Jump (32x32)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -162,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bc1512711e1a7a0800000000000000
-      internalID: -6367560908665664636
+      spriteID: dc26ef155fcd716479d3d641d4bf610e
+      internalID: -9101230857065804138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (32x32)_1
+      name: Double Jump (32x32)_1
       rect:
         serializedVersion: 2
         x: 32
@@ -183,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b36bf1052241fba0800000000000000
-      internalID: -6056987297122131021
+      spriteID: 63270021216da4a488905ef860348008
+      internalID: -6204479477933590408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (32x32)_2
+      name: Double Jump (32x32)_2
       rect:
         serializedVersion: 2
         x: 64
@@ -204,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc36466d4297ec470800000000000000
-      internalID: 8416797952724722639
+      spriteID: 67f09dbbeaf6da945af5b6db94d6011a
+      internalID: 7040038629683462113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (32x32)_3
+      name: Double Jump (32x32)_3
       rect:
         serializedVersion: 2
         x: 96
@@ -225,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3eb7246cac54c340800000000000000
-      internalID: 4883129791460916795
+      spriteID: 0e6dde468ba0a8648b2aea51d2cf6d74
+      internalID: 781615245368611544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (32x32)_4
+      name: Double Jump (32x32)_4
       rect:
         serializedVersion: 2
         x: 128
@@ -246,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c4b5e341a4df5b30800000000000000
-      internalID: 4278371960119211202
+      spriteID: fe00bc1ac1825f347b51764de015d3b8
+      internalID: -3939753913355333839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (32x32)_5
+      name: Double Jump (32x32)_5
       rect:
         serializedVersion: 2
         x: 160
@@ -267,113 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef15b2d807d98f770800000000000000
-      internalID: 8644832591467991550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (32x32)_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 305ad9e2b3b4cbc90800000000000000
-      internalID: -7152759390613953277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (32x32)_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14ac0fe0cec6b9950800000000000000
-      internalID: 6456874251884481089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (32x32)_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8620037e6c2eeecd0800000000000000
-      internalID: -2526832996998184344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (32x32)_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97518d1afe476fc30800000000000000
-      internalID: 4392827059107796345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (32x32)_10
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84cd8260deea21de0800000000000000
-      internalID: -1363835404106015672
+      spriteID: dc912b65259bb044da9cb45c1f15f74f
+      internalID: 6301718139250434432
       vertices: []
       indices: 
       edges: []
