@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 /* Script snippets from
  * https://medium.com/nerd-for-tech/player-movement-in-unity-2d-using-rigidbody2d-4f6f1693d730
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] private float playerSpeed = 5.0f;
 	[SerializeField] private float jumpPower = 5.0f;
+	[SerializeField] private FixedJoystick joystick;
+	[SerializeField] private Button action;
 
 	private Rigidbody2D _rb;
 	private Animator _animator;
@@ -24,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 		_animator = GetComponent<Animator>();
 		_renderer = GetComponent<SpriteRenderer>();
 		_collider = GetComponent<BoxCollider2D>();
+
+		action.onClick.AddListener(ActionHandler);
 	}
 	private void Update()
 	{
@@ -31,30 +36,35 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Input.GetButtonDown("Jump"))
 		{
-			if (isGrounded)
-			{
-				Jump();
-				canDoubleJump = true;
-			}
-			else if (canDoubleJump)
-			{
-				Jump();
-				canDoubleJump = false;
-				_animator.SetTrigger("DoubleJump");
-			}
+			ActionHandler();
 		}
 
 		UpdateAnimation();
 	}
 	private void MovePlayer()
 	{
-		dirX = Input.GetAxisRaw("Horizontal");
+		dirX = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
 		_rb.velocity = new Vector2(dirX * playerSpeed, _rb.velocity.y);
 	}
 	private void Jump()
 	{
 		_rb.velocity = new Vector2(0, jumpPower);
 		isGrounded = false;
+	}
+
+	private void ActionHandler()
+	{
+		if (isGrounded)
+		{
+			Jump();
+			canDoubleJump = true;
+		}
+		else if (canDoubleJump)
+		{
+			Jump();
+			canDoubleJump = false;
+			_animator.SetTrigger("DoubleJump");
+		}
 	}
 
 	private void UpdateAnimation()
