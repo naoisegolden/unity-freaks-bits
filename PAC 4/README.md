@@ -10,6 +10,8 @@ Pixels Per Unit set at 32.
 
 Touch controls with Joystick Pack package from Unity Asset Store and custom button.
 
+Player script informs Game script when it dies, so that the logic of the player dying (animations) and the side effects are separated.
+
 ## Resources
 
 * Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
