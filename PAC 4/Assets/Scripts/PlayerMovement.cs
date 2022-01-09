@@ -6,10 +6,11 @@ using UnityEngine.UI;
  */
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField] private float playerSpeed = 5.0f;
+	[SerializeField] private float playerSpeed = 1.0f;
 	[SerializeField] private float jumpPower = 5.0f;
 	[SerializeField] private FixedJoystick joystick;
 	[SerializeField] private Button action;
+	[SerializeField] private ParticleSystem dust;
 
 	private Rigidbody2D _rb;
 	private Animator _animator;
@@ -49,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		_rb.velocity = new Vector2(0, jumpPower);
 		isGrounded = false;
+
+		CreateDust();
 	}
 
 	private void ActionHandler()
@@ -100,6 +103,13 @@ public class PlayerMovement : MonoBehaviour
 			// End jump
 			isGrounded = true;
 			_animator.SetBool("IsFalling", false);
+
+			CreateDust();
 		}
+	}
+
+	private void CreateDust()
+	{
+		dust?.Play();
 	}
 }
