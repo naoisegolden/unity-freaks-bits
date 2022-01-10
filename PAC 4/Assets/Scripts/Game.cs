@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
 	[SerializeField] private Player player;
+	[SerializeField] private Minion minion;
 	[SerializeField] private Collectible collectible;
 
 	private bool collected = false;
@@ -11,6 +12,7 @@ public class Game : MonoBehaviour
 	void Awake()
 	{
 		player.OnDie += PlayerDie;
+		minion.OnCollected += MinionCollected;
 		if (collectible) collectible.OnCollected += CollectibleCollected;
 	}
 
@@ -24,8 +26,14 @@ public class Game : MonoBehaviour
 		Invoke(nameof(RestartLevel), .5f);
 	}
 
+	private void MinionCollected()
+	{
+		Debug.Log("Minion collected");
+	}
+
 	private void CollectibleCollected()
 	{
+		Debug.Log("Collectible collected");
 		collected = true;
 	}
 }

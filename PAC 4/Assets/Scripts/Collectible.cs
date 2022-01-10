@@ -4,7 +4,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
 	public Action OnCollected;
-	private Disappearable disappearable;
+	public Disappearable disappearable;
 
 	private void Awake()
 	{
@@ -21,9 +21,14 @@ public class Collectible : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			OnCollected?.Invoke();
-
-			disappearable.Disappear();
+			Collected();
 		}
+	}
+
+	public virtual void Collected()
+	{
+		OnCollected?.Invoke();
+
+		disappearable.Disappear();
 	}
 }
