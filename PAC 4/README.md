@@ -12,6 +12,12 @@ Touch controls with Joystick Pack package from Unity Asset Store and custom butt
 
 Player script informs Game script when it dies, so that the logic of the player dying (animations) and the side effects are separated.
 
+Enemy patrols.
+
+Particle system for dust effect on jumping and landing.
+
+Generic `Killer` tag converts any game object with a collider into a trap or an enemy.
+
 ## Resources
 
 * Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
