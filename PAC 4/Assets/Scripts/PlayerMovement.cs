@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 		_renderer = GetComponent<SpriteRenderer>();
 		_collider = GetComponent<BoxCollider2D>();
 
-		action.onClick.AddListener(ActionHandler);
+		action.onClick.AddListener(JumpHandler);
 	}
 	private void Update()
 	{
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Input.GetButtonDown("Jump"))
 		{
-			ActionHandler();
+			JumpHandler();
 		}
 
 		UpdateAnimation();
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 		CreateDust();
 	}
 
-	private void ActionHandler()
+	private void JumpHandler()
 	{
 		if (isGrounded)
 		{
