@@ -12,18 +12,25 @@ public class DialogueManager : MonoBehaviour
 	public Action OnEnd;
 
 	private Queue<string> sentences;
+	private bool isOpen;
 
-	// Use this for initialization
 	void Start()
 	{
 		sentences = new Queue<string>();
+	}
 
-		// StartDialogue();
+	void Update()
+	{
+		if (isOpen && (Input.GetKeyDown("space") || Input.GetKeyDown("right") || Input.GetKeyDown("down")))
+		{
+			DisplayNextSentence();
+		}
 	}
 
 	// public void StartDialogue(Dialogue dialogue)
 	public void StartDialogue()
 	{
+		isOpen = true;
 		animator.SetBool("IsOpen", true);
 
 		string[] dialogue = new string[3] {
@@ -70,6 +77,7 @@ public class DialogueManager : MonoBehaviour
 	{
 		OnEnd?.Invoke();
 
+		isOpen = false;
 		animator.SetBool("IsOpen", false);
 	}
 
