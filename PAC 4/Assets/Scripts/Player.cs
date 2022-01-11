@@ -21,6 +21,15 @@ public class Player : MonoBehaviour, IDisappearable
 		OnDie?.Invoke();
 	}
 
+	public void Stop()
+	{
+		PlayerMovement movement = GetComponent<PlayerMovement>();
+		if (movement != null)
+		{
+			movement.Stop();
+		}
+	}
+
 	public void Disappear()
 	{
 		disappearable.Disappear();

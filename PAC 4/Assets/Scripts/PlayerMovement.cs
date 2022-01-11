@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	private void Update()
 	{
-		MovePlayer();
+		Move();
 
 		if (Input.GetButtonDown("Jump"))
 		{
@@ -41,11 +41,21 @@ public class PlayerMovement : MonoBehaviour
 
 		UpdateAnimation();
 	}
-	private void MovePlayer()
+	private void Move()
 	{
 		dirX = Input.GetAxisRaw("Horizontal") + joystick.Horizontal;
 		_rb.velocity = new Vector2(dirX * playerSpeed, _rb.velocity.y);
 	}
+
+	public void Stop()
+	{
+		_rb.velocity = new Vector2(0, _rb.velocity.y);
+		_animator.SetFloat("Speed", 0);
+		_animator.SetTrigger("Stop");
+
+		this.enabled = false;
+	}
+
 	private void Jump()
 	{
 		_rb.velocity = new Vector2(0, jumpPower);

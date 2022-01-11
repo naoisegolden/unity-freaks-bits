@@ -6445,7 +6445,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.125}
+  m_Offset: {x: 0.18868506, y: -0.125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6456,7 +6456,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.75}
+  m_Size: {x: 0.8773701, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &891330772
 MonoBehaviour:
@@ -10288,6 +10288,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2140879185}
     m_Modifications:
+    - target: {fileID: -3462447982079022610, guid: 390d1b43dec754bf3930f09ba2d72eee, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 7986443051053513877, guid: 154fc62ba6b9f49b1bcfa1fa53c34a21, type: 3}
     - target: {fileID: 7485465595113647873, guid: 390d1b43dec754bf3930f09ba2d72eee, type: 3}
       propertyPath: m_Name
       value: Cherries

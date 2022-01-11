@@ -48,12 +48,13 @@ public class Game : MonoBehaviour
 	private void MinionFound()
 	{
 		dialogueManager.StartDialogue();
+		player.Stop();
 	}
 
 	private void DialogueEnd()
 	{
 		Invoke(nameof(DisappearMinion), 1.0f);
-		Invoke(nameof(DisappearPlayer), 1.3f);
+		Invoke(nameof(DisappearPlayer), 1.2f);
 		Invoke(nameof(NextLevel), 2.0f);
 	}
 
