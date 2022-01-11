@@ -1,21 +1,29 @@
 using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+[RequireComponent(typeof(Disappearable))]
+public class Player : MonoBehaviour, IDisappearable
 {
 	public Action OnDie;
+	private Disappearable disappearable;
+	private Animator animator;
 
-	private Animator _animator;
 	private void Awake()
 	{
-		_animator = GetComponent<Animator>();
+		animator = GetComponent<Animator>();
+		disappearable = GetComponent<Disappearable>();
 	}
 
 	private void Die()
 	{
-		_animator.SetTrigger("Die");
+		animator.SetTrigger("Die");
 
 		OnDie?.Invoke();
+	}
+
+	public void Disappear()
+	{
+		disappearable.Disappear();
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)

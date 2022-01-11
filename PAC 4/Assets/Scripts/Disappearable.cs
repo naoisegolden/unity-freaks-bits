@@ -1,5 +1,10 @@
 using UnityEngine;
 
+interface IDisappearable
+{
+	void Disappear();
+}
+
 public class Disappearable : MonoBehaviour
 {
 	[SerializeField] private GameObject prefab;

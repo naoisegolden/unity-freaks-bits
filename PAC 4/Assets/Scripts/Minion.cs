@@ -1,12 +1,32 @@
 using System;
 using UnityEngine;
 
-public class Minion : Collectible
+[RequireComponent(typeof(Disappearable))]
+public class Minion : MonoBehaviour, IDisappearable
 {
-	override public void Collected()
-	{
-		OnCollected?.Invoke();
+	public Action OnFound;
+	private Disappearable disappearable;
 
-		this.disappearable.Disappear();
+	private void Awake()
+	{
+		disappearable = GetComponent<Disappearable>();
+	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			Found();
+		}
+	}
+
+	private void Found()
+	{
+		OnFound?.Invoke();
+	}
+
+	public void Disappear()
+	{
+		disappearable.Disappear();
 	}
 }

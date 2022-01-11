@@ -18,6 +18,10 @@ Particle system for dust effect on jumping and landing.
 
 Generic `Killer` tag converts any game object with a collider into a trap or an enemy.
 
+Use of interfaces for the IDisappearable behavior in collectibles, player and NPC.
+
+Gracefully fails if `Disappear` component is not present. Uses `RequireComponent` to inform.
+
 ## Resources
 
 * Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
