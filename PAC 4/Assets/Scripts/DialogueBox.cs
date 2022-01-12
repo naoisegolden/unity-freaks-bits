@@ -1,0 +1,32 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class DialogueBox : MonoBehaviour
+{
+	private Text dialogueText;
+	private Image faceImage;
+
+	private void Awake()
+	{
+		dialogueText = GetComponentInChildren<Text>();
+		faceImage = gameObject.transform.Find("Face").GetComponent<Image>();
+	}
+	public void Display(string sentence, Sprite face)
+	{
+		faceImage.sprite = face;
+
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
+	}
+
+	private IEnumerator TypeSentence(string sentence)
+	{
+		dialogueText.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			dialogueText.text += letter;
+			yield return null;
+		}
+	}
+}
