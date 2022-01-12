@@ -5932,11 +5932,17 @@ MonoBehaviour:
   dialogueBox: {fileID: 430478915}
   animator: {fileID: 430478913}
   dialogue:
-    face: {fileID: 21300000, guid: a99acb955d46b4f1cbca2757c9257b05, type: 3}
     sentences:
-    - S'obre el telo i es veu un tio que aparca a la zona verda fent malabarismes...
-    - Nom del videojoc?
-    - RESIDENT HABIL
+    - Text: Tens un joc de paraules per a mi?
+      Face: {fileID: 21300000, guid: f4c7c6ca0214349f79569633f469c5ae, type: 3}
+    - Text: S'obre el telo i es veu un tio que aparca a la zona verda fent malabarismes...
+      Face: {fileID: 21300000, guid: a99acb955d46b4f1cbca2757c9257b05, type: 3}
+    - Text: Nom del videojoc?
+      Face: {fileID: 21300000, guid: a99acb955d46b4f1cbca2757c9257b05, type: 3}
+    - Text: RESIDENT HABIL
+      Face: {fileID: 21300000, guid: a99acb955d46b4f1cbca2757c9257b05, type: 3}
+    - Text: Sublim.
+      Face: {fileID: 21300000, guid: f4c7c6ca0214349f79569633f469c5ae, type: 3}
 --- !u!1 &703547545
 GameObject:
   m_ObjectHideFlags: 0

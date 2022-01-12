@@ -14,12 +14,12 @@ public class DialogueManager : MonoBehaviour
 
 	public Action OnEnd;
 
-	private Queue<string> sentences;
+	private Queue<Sentence> sentences;
 	private bool isOpen;
 
 	void Start()
 	{
-		sentences = new Queue<string>();
+		sentences = new Queue<Sentence>();
 	}
 
 	void Update()
@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
 
 		sentences.Clear();
 
-		foreach (string sentence in dialogue.sentences)
+		foreach (Sentence sentence in dialogue.sentences)
 		{
 			sentences.Enqueue(sentence);
 		}
@@ -53,9 +53,9 @@ public class DialogueManager : MonoBehaviour
 			return;
 		}
 
-		string sentence = sentences.Dequeue();
+		(string sentence, Sprite face) = sentences.Dequeue();
 
-		dialogueBox.Display(sentence, dialogue.face);
+		dialogueBox.Display(sentence, face);
 	}
 
 	private void EndDialogue()
