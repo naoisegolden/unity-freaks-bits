@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
 	[SerializeField] private Animator transition;
-	[SerializeField] private float transitionTime = 1.0f;
+	[SerializeField] private float transitionTime = 2.0f;
 
 	public void LoadScene(string scene)
 	{
@@ -13,7 +13,7 @@ public class SceneTransitionManager : MonoBehaviour
 
 	IEnumerator LoadSceneCoroutine(string scene)
 	{
-		transition.SetTrigger("StartTransition");
+		transition.SetTrigger("Start");
 
 		yield return new WaitForSeconds(transitionTime);
 

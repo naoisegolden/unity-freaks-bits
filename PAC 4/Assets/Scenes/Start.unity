@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee964221af8984a69afac8e34042d5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1075960277}
+  transition: {fileID: 1571515924}
   transitionTime: 1
 --- !u!114 &466882410
 MonoBehaviour:
@@ -698,11 +698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057969903}
   m_CullTransparentMesh: 1
---- !u!95 &1075960277 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4258648465407848628, guid: 6ff709226e9f6435cb7d24412339a68d, type: 3}
-  m_PrefabInstance: {fileID: 1635017195}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1566931694
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +764,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1571515924 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6337358857343629974, guid: 6ff709226e9f6435cb7d24412339a68d, type: 3}
+  m_PrefabInstance: {fileID: 1635017195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1635017195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -824,5 +824,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6641870464838146034, guid: 6ff709226e9f6435cb7d24412339a68d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff709226e9f6435cb7d24412339a68d, type: 3}
