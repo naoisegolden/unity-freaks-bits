@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(DialogueManager))]
+[RequireComponent(typeof(SceneTransitionManager))]
 public class Game : MonoBehaviour
 {
 	[SerializeField] private Player player;
 	[SerializeField] private Minion minion;
 	[SerializeField] private Collectible collectible;
 
+	private SceneTransitionManager sceneTransitionManager;
 	private DialogueManager dialogueManager;
 
 	private bool collected = false;
@@ -18,20 +21,21 @@ public class Game : MonoBehaviour
 		if (collectible) collectible.OnCollected += CollectibleCollected;
 
 		dialogueManager = GetComponent<DialogueManager>();
-		if (dialogueManager == null) Debug.LogError("Missing DialogueManager component in Game script game object.");
 		dialogueManager.OnEnd += DialogueEnd;
+
+		sceneTransitionManager = GetComponent<SceneTransitionManager>();
 	}
 
 	private void RestartLevel()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		sceneTransitionManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	private void NextLevel()
 	{
 		// WIP: fix this when more levels added
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		SceneManager.LoadScene("Start");
+		sceneTransitionManager.LoadScene("LevelTemplate");
 	}
 
 	private void PlayerDie()
@@ -53,9 +57,9 @@ public class Game : MonoBehaviour
 
 	private void DialogueEnd()
 	{
-		Invoke(nameof(DisappearMinion), 1.0f);
-		Invoke(nameof(DisappearPlayer), 1.2f);
-		Invoke(nameof(NextLevel), 2.0f);
+		Invoke(nameof(NextLevel), 0.5f);
+		Invoke(nameof(DisappearMinion), 1.5f);
+		Invoke(nameof(DisappearPlayer), 1.7f);
 	}
 
 	private void DisappearMinion()

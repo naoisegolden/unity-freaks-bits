@@ -24,6 +24,8 @@ Gracefully fails if `Disappear` component is not present. Uses `RequireComponent
 
 Use of struct, class, queues and `System.Serializable` to allow dynamic game object fields for the dialog logic. Implemented `Deconstruct` in struct for syntactic sugar. Any amount of dialogue and characters can be created directly in the Dialogue Manager component.
 
+Implemented scene transitions.
+
 ## Resources
 
 * Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
