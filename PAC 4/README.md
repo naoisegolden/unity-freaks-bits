@@ -26,6 +26,8 @@ Use of struct, class, queues and `System.Serializable` to allow dynamic game obj
 
 Implemented scene transitions.
 
+Implemented camera shake (when player dies) with Cinemachine Impulse source and listeners.
+
 ## Resources
 
 * Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059

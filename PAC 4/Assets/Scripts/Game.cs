@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(DialogueManager))]
 [RequireComponent(typeof(SceneTransitionManager))]
+[RequireComponent(typeof(CameraManager))]
 public class Game : MonoBehaviour
 {
 	[SerializeField] private Player player;
@@ -11,6 +12,7 @@ public class Game : MonoBehaviour
 
 	private SceneTransitionManager sceneTransitionManager;
 	private DialogueManager dialogueManager;
+	private CameraManager cameraManager;
 
 	private bool collected = false;
 
@@ -24,6 +26,8 @@ public class Game : MonoBehaviour
 		dialogueManager.OnEnd += DialogueEnd;
 
 		sceneTransitionManager = GetComponent<SceneTransitionManager>();
+
+		cameraManager = GetComponent<CameraManager>();
 	}
 
 	private void RestartLevel()
@@ -40,6 +44,8 @@ public class Game : MonoBehaviour
 
 	private void PlayerDie()
 	{
+		cameraManager.Shake();
+
 		Invoke(nameof(RestartLevel), .5f);
 	}
 

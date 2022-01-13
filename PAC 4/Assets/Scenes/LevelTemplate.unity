@@ -1078,6 +1078,8 @@ GameObject:
   - component: {fileID: 665099891}
   - component: {fileID: 665099893}
   - component: {fileID: 665099894}
+  - component: {fileID: 665099896}
+  - component: {fileID: 665099895}
   m_Layer: 0
   m_Name: GameScripts
   m_TagString: Untagged
@@ -1156,6 +1158,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 4258648465690369609}
   transitionTime: 2
+--- !u!114 &665099895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665099890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: 7845c2437f6694db3a4fafdc444d550f, type: 2}
+    m_AmplitudeGain: 0.5
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 0
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
+    m_PropagationSpeed: 343
+--- !u!114 &665099896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665099890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8287e2e147eef4a309d029ddd71b409e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &703547545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1301,7 @@ GameObject:
   - component: {fileID: 716203868}
   - component: {fileID: 716203867}
   - component: {fileID: 716203870}
+  - component: {fileID: 716203871}
   m_Layer: 0
   m_Name: Cinemachine Camera
   m_TagString: Untagged
@@ -1331,6 +1388,21 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1442532638}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &716203871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716203866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1001 &758472162
 PrefabInstance:
   m_ObjectHideFlags: 0
