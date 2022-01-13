@@ -38,7 +38,8 @@ Implemented camera shake (when player dies) with Cinemachine Impulse source and 
 
 ## Resources
 
-* Free Pixel Font - Thaleah: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
-* Player and world: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
-* Enemies: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-2-155418
+* Thaleah font: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
+* Gotham Black font: https://fontsgeek.com/fonts/Gotham-Black
+* Player and world sprites: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
+* Enemies sprites: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-2-155418
 * Joystick Pack: https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631
