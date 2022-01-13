@@ -2,6 +2,8 @@
 
 Author: Naoise Golden Santos <naoise@uoc.edu>
 
+Video: https://youtu.be/deSMFQ9jOF0
+
 ## Requirements
 
 * Pantalla con logo corporativo (puede ser el de la UOC o el de vuestra propia compañía ficticia).
@@ -10,17 +12,19 @@ Author: Naoise Golden Santos <naoise@uoc.edu>
 * Dos pantallas de juego (con su UI correspondiente).
 * Pantalla de créditos.
 
+## Game instruction
+
+Follow the instructions in the level tutorials.
+
 ## Implementation
 
-Pixel Perfect Camera.
-
-Pixels Per Unit set at 32.
+Pixel Perfect Camera. Pixels Per Unit set at 32 throughout the game.
 
 Touch controls with Joystick Pack package from Unity Asset Store and custom button.
 
 Player script informs Game script when it dies, so that the logic of the player dying (animations) and the side effects are separated.
 
-Enemy patrols.
+The enemies patrol based on `RigidBody 2D` and collisions with the world.
 
 Particle system for dust effect on jumping and landing.
 
@@ -46,6 +50,8 @@ Uses `Action` to distribute logic as side effects: events like `Die` or `Pause` 
 * Add more traps, enemies, platforms and minions.
 * Add more levels.
 * Add level map scene.
+* Fix bugs and typos in game tutorial.
+* Improve current maps.
 
 ## Resources
 
