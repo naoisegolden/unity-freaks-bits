@@ -2,6 +2,14 @@
 
 Author: Naoise Golden Santos <naoise@uoc.edu>
 
+## Requirements
+
+* Pantalla con logo corporativo (puede ser el de la UOC o el de vuestra propia compañía ficticia).
+* Pantalla de título.
+* Pantalla de menú principal (con menú de opciones).
+* Dos pantallas de juego (con su UI correspondiente).
+* Pantalla de créditos.
+
 ## Implementation
 
 Pixel Perfect Camera.
