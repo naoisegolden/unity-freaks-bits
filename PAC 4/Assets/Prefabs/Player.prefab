@@ -4971,7 +4971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4111178883974822ac82863f8a7ead0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 4
   jumpPower: 7
   joystick: {fileID: 0}
   action: {fileID: 0}

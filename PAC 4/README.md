@@ -26,6 +26,8 @@ Particle system for dust effect on jumping and landing.
 
 Generic `Killer` tag converts any game object with a collider into a trap or an enemy.
 
+Use of Platform Effector 2D for jump-through platforms.
+
 Use of interfaces. For example, the `IDisappearable` behavior used in collectibles, player and NPC (minion).
 
 Gracefully fails if `Disappear` component is not present. Uses `RequireComponent` to inform.

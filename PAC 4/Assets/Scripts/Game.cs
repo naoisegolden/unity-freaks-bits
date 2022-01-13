@@ -25,6 +25,7 @@ public class Game : MonoBehaviour
 	[SerializeField] private Minion minion;
 	[SerializeField] private Collectible bonus;
 	[SerializeField] private Animator bonusIndicator;
+	[SerializeField] private string nextLevel;
 
 	// Script dependencies
 	private GameMenuManager menuManager;
@@ -70,9 +71,7 @@ public class Game : MonoBehaviour
 
 	private void NextLevel()
 	{
-		// WIP: fix this when more levels added
-		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		sceneTransitionManager.LoadScene("LevelTemplate");
+		sceneTransitionManager.LoadScene(nextLevel);
 	}
 
 	private void PauseGame(bool pause)

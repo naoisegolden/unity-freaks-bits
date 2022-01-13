@@ -6,8 +6,8 @@ using UnityEngine.UI;
  */
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField] private float playerSpeed = 1.0f;
-	[SerializeField] private float jumpPower = 5.0f;
+	[SerializeField] private float playerSpeed = 4.0f;
+	[SerializeField] private float jumpPower = 7.0f;
 	[SerializeField] private FixedJoystick joystick;
 	[SerializeField] private Button action;
 	[SerializeField] private ParticleSystem dust;
