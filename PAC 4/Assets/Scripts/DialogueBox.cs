@@ -28,7 +28,6 @@ public class DialogueBox : MonoBehaviour
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
-			Debug.Log(Random.Range(0, 3));
 			if (Random.Range(0, 3) == 2) speechSound.Play();
 			yield return null;
 		}
