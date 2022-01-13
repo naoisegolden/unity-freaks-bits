@@ -26,7 +26,7 @@ Particle system for dust effect on jumping and landing.
 
 Generic `Killer` tag converts any game object with a collider into a trap or an enemy.
 
-Use of interfaces for the IDisappearable behavior in collectibles, player and NPC.
+Use of interfaces. For example, the `IDisappearable` behavior used in collectibles, player and NPC (minion).
 
 Gracefully fails if `Disappear` component is not present. Uses `RequireComponent` to inform.
 
@@ -36,10 +36,13 @@ Implemented scene transitions.
 
 Implemented camera shake (when player dies) with Cinemachine Impulse source and listeners.
 
+Uses `Action` to distribute logic as side effects: events like `Die` or `Pause` define in `Game.cs` the logic that affects the whole game and in `Player.cs` or `GameMenuManager.cs` the logic that only affects their game objects.
+
 ## Resources
 
 * Thaleah font: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
 * Gotham Black font: https://fontsgeek.com/fonts/Gotham-Black
 * Player and world sprites: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
 * Enemies sprites: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-2-155418
+* UI sprites: https://assetstore.unity.com/packages/2d/gui/icons/simple-free-pixel-art-styled-ui-pack-165012
 * Joystick Pack: https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631

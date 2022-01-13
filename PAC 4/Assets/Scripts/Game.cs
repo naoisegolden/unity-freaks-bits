@@ -1,6 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+struct GameData
+{
+	// Parameterless constructor are only available in C# 10 and up,
+	// so I added a bogus parameter.
+	// See https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct#limitations-with-the-design-of-a-structure-type
+	public GameData(string someValue)
+	{
+		isPaused = false;
+	}
+	public bool isPaused;
+}
+
+[RequireComponent(typeof(GameMenuManager))]
 [RequireComponent(typeof(DialogueManager))]
 [RequireComponent(typeof(SceneTransitionManager))]
 [RequireComponent(typeof(CameraManager))]
@@ -10,24 +23,38 @@ public class Game : MonoBehaviour
 	[SerializeField] private Minion minion;
 	[SerializeField] private Collectible collectible;
 
-	private SceneTransitionManager sceneTransitionManager;
+	private GameMenuManager menuManager;
 	private DialogueManager dialogueManager;
+	private SceneTransitionManager sceneTransitionManager;
 	private CameraManager cameraManager;
 
+	private GameData game = new GameData("unused");
 	private bool collected = false;
 
 	void Awake()
 	{
+		// Dependencies
+		menuManager = GetComponent<GameMenuManager>();
+		dialogueManager = GetComponent<DialogueManager>();
+		sceneTransitionManager = GetComponent<SceneTransitionManager>();
+		cameraManager = GetComponent<CameraManager>();
+
+		// Character actions
 		player.OnDie += PlayerDie;
 		minion.OnFound += MinionFound;
 		if (collectible) collectible.OnCollected += CollectibleCollected;
 
-		dialogueManager = GetComponent<DialogueManager>();
+		// UI actions
+		menuManager.OnPause += () => Invoke(nameof(Pause), 0.5f); // FIXME: Wait for open animation 
+		menuManager.OnResume += Resume;
+		menuManager.OnHome += OnHome;
+		menuManager.OnRestart += OnRestart;
 		dialogueManager.OnEnd += DialogueEnd;
+	}
 
-		sceneTransitionManager = GetComponent<SceneTransitionManager>();
-
-		cameraManager = GetComponent<CameraManager>();
+	private void HomeScene()
+	{
+		sceneTransitionManager.LoadScene("Home");
 	}
 
 	private void RestartLevel()
@@ -40,6 +67,28 @@ public class Game : MonoBehaviour
 		// WIP: fix this when more levels added
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		sceneTransitionManager.LoadScene("LevelTemplate");
+	}
+
+	private void PauseGame(bool pause)
+	{
+		Time.timeScale = pause ? 0f : 1f;
+		game.isPaused = pause;
+	}
+	private void Pause() => PauseGame(true);
+	private void Resume() => PauseGame(false);
+
+	private void OnHome()
+	{
+		Resume();
+		DisappearPlayer();
+		HomeScene();
+	}
+
+	private void OnRestart()
+	{
+		Resume();
+		DisappearPlayer();
+		RestartLevel();
 	}
 
 	private void PlayerDie()
