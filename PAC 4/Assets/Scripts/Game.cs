@@ -87,6 +87,7 @@ public class Game : MonoBehaviour
 	{
 		Resume();
 		DisappearPlayer();
+		DisappearMinion();
 		HomeScene();
 	}
 
@@ -94,6 +95,7 @@ public class Game : MonoBehaviour
 	{
 		Resume();
 		DisappearPlayer();
+		DisappearMinion();
 		RestartLevel();
 	}
 
