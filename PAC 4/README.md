@@ -40,6 +40,13 @@ Implemented camera shake (when player dies) with Cinemachine Impulse source and 
 
 Uses `Action` to distribute logic as side effects: events like `Die` or `Pause` define in `Game.cs` the logic that affects the whole game and in `Player.cs` or `GameMenuManager.cs` the logic that only affects their game objects.
 
+## Next steps
+
+* Add more and better sound effects and music.
+* Add more traps, enemies, platforms and minions.
+* Add more levels.
+* Add level map scene.
+
 ## Resources
 
 * Thaleah font: https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
@@ -48,3 +55,5 @@ Uses `Action` to distribute logic as side effects: events like `Die` or `Pause` 
 * Enemies sprites: https://assetstore.unity.com/packages/2d/characters/pixel-adventure-2-155418
 * UI sprites: https://assetstore.unity.com/packages/2d/gui/icons/simple-free-pixel-art-styled-ui-pack-165012
 * Joystick Pack: https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631
+* Sound effects pack: https://phoenix1291.itch.io/sound-effects-pack-2
+* Music: https://jonathan-so.itch.io/creatorpack

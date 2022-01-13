@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Disappearable))]
 public class Player : MonoBehaviour, IDisappearable
 {
+	[SerializeField] private AudioSource dieSound;
+
 	public Action OnDie;
 	private Disappearable disappearable;
 	private Animator animator;
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour, IDisappearable
 	private void Die()
 	{
 		animator.SetTrigger("Die");
+		dieSound.Play();
 
 		OnDie?.Invoke();
 	}

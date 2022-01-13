@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 interface IDisappearable
@@ -8,12 +9,9 @@ interface IDisappearable
 public class Disappearable : MonoBehaviour
 {
 	[SerializeField] private GameObject prefab;
-	[SerializeField] private AudioSource sound;
 
 	public void Disappear()
 	{
-		if (sound != null) sound.Play();
-
 		if (prefab != null)
 		{
 			UnityEngine.Object disappear = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);

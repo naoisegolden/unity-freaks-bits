@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7485465595113647872}
   - component: {fileID: 7485465595113647876}
   - component: {fileID: 7485465595113647877}
+  - component: {fileID: 1073402459313488613}
   m_Layer: 0
   m_Name: Cherries
   m_TagString: Untagged
@@ -132,3 +133,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01936b8d20684c62b19907d33b37d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1073402459313488613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485465595113647873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aed7f77d86f447e68f88d7014d40a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7986443051053513877, guid: 154fc62ba6b9f49b1bcfa1fa53c34a21, type: 3}

@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Disappearable))]
 public class Collectible : MonoBehaviour, IDisappearable
 {
 	public Action OnCollected;

@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private FixedJoystick joystick;
 	[SerializeField] private Button action;
 	[SerializeField] private ParticleSystem dust;
+	[SerializeField] private AudioSource jumpSound1;
+	[SerializeField] private AudioSource doubleJumpSound;
 
 	private Rigidbody2D _rb;
 	private Animator _animator;
@@ -69,11 +71,13 @@ public class PlayerMovement : MonoBehaviour
 		if (isGrounded)
 		{
 			Jump();
+			jumpSound1.Play();
 			canDoubleJump = true;
 		}
 		else if (canDoubleJump)
 		{
 			Jump();
+			doubleJumpSound.Play();
 			canDoubleJump = false;
 			_animator.SetTrigger("DoubleJump");
 		}

@@ -25,6 +25,8 @@ public class Game : MonoBehaviour
 	[SerializeField] private Minion minion;
 	[SerializeField] private Collectible bonus;
 	[SerializeField] private Animator bonusIndicator;
+	[SerializeField] private AudioSource bonusSound;
+	[SerializeField] private AudioSource music;
 	[SerializeField] private string nextLevel;
 
 	// Script dependencies
@@ -100,6 +102,8 @@ public class Game : MonoBehaviour
 
 	private void PlayerDie()
 	{
+		music.Stop();
+
 		cameraManager.Shake();
 
 		Invoke(nameof(RestartLevel), .5f);
@@ -109,12 +113,14 @@ public class Game : MonoBehaviour
 	{
 		game.isBonusCollected = true;
 		bonusIndicator.SetBool("IsCollected", true);
+		bonusSound.Play();
 	}
 
 	private void MinionFound()
 	{
 		dialogueManager.StartDialogue();
 		player.Stop();
+		music.Stop();
 	}
 
 	private void DialogueEnd()
