@@ -9,8 +9,10 @@ struct GameData
 	public GameData(string someValue)
 	{
 		isPaused = false;
+		isBonusCollected = false;
 	}
 	public bool isPaused;
+	public bool isBonusCollected;
 }
 
 [RequireComponent(typeof(GameMenuManager))]
@@ -21,15 +23,17 @@ public class Game : MonoBehaviour
 {
 	[SerializeField] private Player player;
 	[SerializeField] private Minion minion;
-	[SerializeField] private Collectible collectible;
+	[SerializeField] private Collectible bonus;
+	[SerializeField] private Animator bonusIndicator;
 
+	// Script dependencies
 	private GameMenuManager menuManager;
 	private DialogueManager dialogueManager;
 	private SceneTransitionManager sceneTransitionManager;
 	private CameraManager cameraManager;
 
+	// Game data
 	private GameData game = new GameData("unused");
-	private bool collected = false;
 
 	void Awake()
 	{
@@ -42,7 +46,9 @@ public class Game : MonoBehaviour
 		// Character actions
 		player.OnDie += PlayerDie;
 		minion.OnFound += MinionFound;
-		if (collectible) collectible.OnCollected += CollectibleCollected;
+
+		// Collectible actions
+		if (bonus) bonus.OnCollected += BonusCollected;
 
 		// UI actions
 		menuManager.OnPause += () => Invoke(nameof(Pause), 0.5f); // FIXME: Wait for open animation 
@@ -98,10 +104,10 @@ public class Game : MonoBehaviour
 		Invoke(nameof(RestartLevel), .5f);
 	}
 
-	private void CollectibleCollected()
+	private void BonusCollected()
 	{
-		Debug.Log("Collectible collected");
-		collected = true;
+		game.isBonusCollected = true;
+		bonusIndicator.SetBool("IsCollected", true);
 	}
 
 	private void MinionFound()
