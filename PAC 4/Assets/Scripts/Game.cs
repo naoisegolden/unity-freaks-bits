@@ -54,8 +54,8 @@ public class Game : MonoBehaviour
 		if (bonus) bonus.OnCollected += BonusCollected;
 
 		// UI actions
-		menuManager.OnPause += () => Invoke(nameof(Pause), 0.5f); // FIXME: Wait for open animation 
-		menuManager.OnResume += Resume;
+		menuManager.OnPause += OnPause;
+		menuManager.OnResume += OnResume;
 		menuManager.OnHome += OnHome;
 		menuManager.OnRestart += OnRestart;
 		dialogueManager.OnEnd += DialogueEnd;
@@ -81,8 +81,28 @@ public class Game : MonoBehaviour
 		Time.timeScale = pause ? 0f : 1f;
 		game.isPaused = pause;
 	}
-	private void Pause() => PauseGame(true);
-	private void Resume() => PauseGame(false);
+
+	private void Pause()
+	{
+		PauseGame(true);
+	}
+
+	private void Resume()
+	{
+		PauseGame(false);
+	}
+
+	private void OnPause()
+	{
+		music.Pause();
+		Invoke(nameof(Pause), 0.5f); // FIXME: Wait for open animation
+	}
+
+	private void OnResume()
+	{
+		music.Play();
+		Resume();
+	}
 
 	private void OnHome()
 	{
