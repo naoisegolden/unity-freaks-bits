@@ -16,6 +16,10 @@ Video: https://youtu.be/ePDfZ_g3zg4
 
 Follow the instructions in the level tutorials.
 
+The game is controlled both with the touch controls (horizontal joystick on the bottom left, jump button on the bottom right, tap dialog box to skip conversation, tap screen to skip home and credit screens), and keyboard (right and left arrow to move, space to jump, escape to pause, space, right and down arrows to skip conversation).
+
+The objective is to reach the minion without getting killed by enemies or traps. There is an extra bonus item that can be collected.
+
 ## Description
 
 The game is a 2D platformer for mobile devices, inspired by [Thomas K. Young's](http://www.thomaskyoung.com/) Dadish.
